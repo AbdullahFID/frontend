@@ -77,11 +77,7 @@ export function BookItemCard(props: BookItemProps) {
             <div className="mt-4 flex flex-wrap gap-5">
               {hasExternalDownloads ? (
                 props.externalDownloadsFetched ? (
-                  props.externalDownloads && props.externalDownloads.length > 0 ? (
-                    <BookDownloadButton title={props.title} extension={props.book_filetype} externalDownloads={props.externalDownloads} primaryLink={props.link} />
-                  ) : (
-                    <div className="text-muted-foreground py-2 text-sm">No downloads available</div>
-                  )
+                  <BookDownloadButton title={props.title} extension={props.book_filetype} externalDownloads={props.externalDownloads} primaryLink={props.link} />
                 ) : (
                   <div className="flex items-center gap-2 py-1">
                     <Loader2 className="h-4 w-4 animate-spin" />
@@ -196,11 +192,7 @@ export function BookItemDialog(props: BookItemProps) {
         <DialogFooter className="flex flex-row justify-between md:justify-end">
           {hasExternalDownloads ? (
             props.externalDownloadsFetched ? (
-              props.externalDownloads && props.externalDownloads.length > 0 ? (
-                <BookDownloadButton title={props.title} extension={props.book_filetype} externalDownloads={props.externalDownloads} primaryLink={props.link} />
-              ) : (
-                <div className="text-muted-foreground py-y text-sm">No downloads available</div>
-              )
+              <BookDownloadButton title={props.title} extension={props.book_filetype} externalDownloads={props.externalDownloads} primaryLink={props.link} />
             ) : (
               <div className="flex items-center gap-2 py-1">
                 <Loader2 className="h-4 w-4 animate-spin" />
