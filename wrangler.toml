@@ -1,8 +1,7 @@
-name = "bookracy-frontend"
+name = "bookracy"
 compatibility_date = "2025-09-21"
 
-# Serve static files from ./dist without writing a Worker script
 [assets]
 directory = "./dist"
-binding = "ASSETS"         # internal binding name
-html_handling = "auto"     # SPA-friendly (serves index.html on unknown routes)
+binding = "ASSETS"
+html_handling = "auto-trailing-slash"  # <-- fixed value
