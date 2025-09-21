@@ -27,7 +27,7 @@ export const useSettingsStore = create<SettingsStoreState>()(
   persist(
     (set) => ({
       language: "en",
-      backendURL: "https://backend.bookracy.ru",
+      backendURL: "https://api.bookracy.com",
       theme: "dark",
       beta: false,
 
@@ -42,7 +42,7 @@ export const useSettingsStore = create<SettingsStoreState>()(
       version: 1,
       migrate(persistedState, version) {
         if (version === 0 && isOldState(persistedState)) {
-          return { ...persistedState, backendURL: "https://backend.bookracy.ru" };
+          return { ...persistedState, backendURL: "https://api.bookracy.com };
         }
       },
     },
