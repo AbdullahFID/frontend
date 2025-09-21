@@ -3,5 +3,4 @@ compatibility_date = "2025-09-21"
 
 [assets]
 directory = "./dist"
-binding = "ASSETS"
-html_handling = "auto-trailing-slash"  # <-- fixed value
+html_handling = "auto-trailing-slash"
